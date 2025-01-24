@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Widget Demo</title>
+</head>
+<body>
+  <h1>Welcome to My Website</h1>
+  <p>This is a simple webpage to demonstrate the chat widget.</p>
+
+  <script>
+    // Configuration for the chatbot
+    const botConfig = {
+      botId: "hello", // Use a valid API key here
+      color: "#569CCE",
+      title: "Support Bot",
+      welcomeMessage: "Hi! How can I help you today? 👋",
+      buttonAlign: "right",
+      buttonText: "Chat with AI",
+      apiUrl: "http://localhost:8000", // Update to your backend
+      darkMode: false,
+      fontSize: "14px",
+      height: "500px",
+      width: "450px"
+    };
+
+    // Dynamically load the chat widget script
+    const script = document.createElement("script");
+    script.src = "chat.js"; // Path to the bundled chat.js file
+    script.async = true;
+    script.onload = () => {
+      if (window.DocsBotAI) {
+        window.DocsBotAI.init(botConfig);
+      }
+    };
+    document.head.appendChild(script);
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Widget Demo</title>
+  </head>
+  <body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple webpage to demonstrate the chat widget.</p>
+
+    <script>
+      (function () {
+        const botConfig = {
+          botId: "4",
+          color: "#569CCE",
+          title: "Support ",
+          welcomeMessage: "Hi! How can I help you today? 👋",
+          headerText: "Support Bot",
+          apiUrl: "https://my0jhajg7c.execute-api.ap-southeast-1.amazonaws.com",
+          buttonAlign: "right",
+          buttonText: "Chat with us",
+          height: "500px",
+          width: "350px",
+          displayStyle: "corner",
+          customIcon: null,
+          starter_questions: ["What is this about?", "How do I get started?"],
+        };
+        const script = document.createElement("script");
+        // script.src = "https://cloud-ide-shas.s3.us-east-1.amazonaws.com/docBot/chat.js";
+        script.src = "./chat.js";
+        script.async = true;
+        script.onload = () => {
+          if (window.DocsBotAI) {
+            window.DocsBotAI.init(botConfig);
+          }
+        };
+        document.head.appendChild(script);
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </body>
+</html>
